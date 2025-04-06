@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Brigade de la Loup-Garou Mobile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        section.page {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            height: 80vh;
+            overflow-y: auto;
+        }
+        section.active {
+            display: block;
+        }
+        .turn-page-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+		 .dialogue {
+    font-style: italic;
+    margin-left: 1.5em;
+    display: block;
+  }
+  .special-quote {
+  font-style: italic;
+  margin-left: 2em;
+  padding-left: 1em;
+  border-left: 3px solid #999;
+  color: #333;
+  position: relative;
+}
+
+.special-quote::before {
+  content: "➢";
+  position: absolute;
+  left: -1.5em;
+  color: #555;
+  font-weight: bold;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #999;
+  margin: 20px 0;
+}
+.fleche-dialogue {
+  margin-left: 1.5em;
+  font-style: italic;
+  color: #444;
+}
+.liste-histoire {
+  list-style-type: "➤ "; /* Flèche avant chaque élément */
+  padding-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-style: italic;
+  color: #333; /* Ou une autre couleur selon ton thème */
+}
+
+.liste-histoire li {
+  margin-bottom: 0.5em;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Brigade de la Loup-Garou Mobile</h1>
+    </header>
+    <nav>
+	    <a href="#" onclick="showPage('premierecouverture')">Première de couverture</a>
+	    <a href="#" onclick="showPage('presentation')">Présentation</a>
+		<a href="#" onclick="showPage('personnagesprincipaux')">Personnages Principaux</a>
+		<a href="#" onclick="showPage('tabledesmatieres')">Table des Matières</a>
+        <a href="#" onclick="showPage('prologue')">Prologue</a>
+        <a href="#" onclick="showPage('chapitre1')">Chapitre 1</a>
+        <a href="#" onclick="showPage('chapitre2')">Chapitre 2</a>
+        <a href="#" onclick="showPage('chapitre3')">Chapitre 3</a>
+        <a href="#" onclick="showPage('chapitre4')">Chapitre 4</a>
+        <a href="#" onclick="showPage('chapitre5')">Chapitre 5</a>
+        <a href="#" onclick="showPage('chapitre6')">Chapitre 6</a>
+        <a href="#" onclick="showPage('chapitre7')">Chapitre 7</a>
+        <a href="#" onclick="showPage('chapitre8')">Chapitre 8</a>
+        <a href="#" onclick="showPage('chapitre9')">Chapitre 9</a>
+        <a href="#" onclick="showPage('chapitre10')">Chapitre 10</a>
+        <a href="#" onclick="showPage('chapitre11')">Chapitre 11</a>
+        <a href="#" onclick="showPage('chapitre12')">Chapitre 12</a>
+        <a href="#" onclick="showPage('chapitre13')">Chapitre 13</a>
+        <a href="#" onclick="showPage('chapitre14')">Chapitre 14</a>
+        <a href="#" onclick="showPage('chapitre15')">Chapitre 15</a>
+        <a href="#" onclick="showPage('chapitre16')">Chapitre 16</a>
+		<a href="#" onclick="showPage('resume')">Dernière de couverture</a>
+    </nav>
+	<section id="premierecouverture" class="page">
+  <h2 style="display:none;">Première de couverture</h2>
+  <div style="text-align:center;">
+    <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_00000000ddf051f8afe30ac2895b066b_conversation_id_67f1682c-e48c-8004-b5e0-8c1d41d4f126_message_id_fdd9cc43-31db-4362-af45-b23555fa1f73__1_.png" alt="Couverture du livre" style="max-width:100%; height:auto;">
+  </div>
+</section>
+
+
+
+<section id="presentation" class="page">
+  <h2 style="display:none;">Présentation</h2>
+  <p style="text-align:center; font-size:1.2em; padding: 40px;">
+    Fait par l'Assistant Google, s’est inspiré de Cathy BELLAMY, Léo TRESCASES BELLAMY, Tania, Léo COMETTI, Morgan PRIEST, Lionel CAMY, et de Thierry PEYRE.
+  </p>
+</section>
+
+<section id="personnagesprincipaux" class="page">
+  <h2 style="text-align:center;">Personnages Principaux</h2>
+  <ul style="max-width: 600px; margin: auto; font-size: 1.1em; line-height: 1.6;">
+    <li><strong>Cathy BELLAMY</strong> : Grand-mère de Léo, chasseuse de mystères, vit à la lisière de la forêt de Bordes.</li>
+    <li><strong>Léo TRESCASES BELLAMY</strong> : Jeune génie de l’informatique, petit-fils de Cathy, chef technique de la brigade.</li>
+    <li><strong>Tania</strong> : Fidèle chienne border collie de Cathy, dotée d’un instinct infaillible face au danger.</li>
+    <li><strong>Léo COMETTI</strong> : Ami sportif et spécialiste du kayak, intervient sur les zones d’eau.</li>
+    <li><strong>Morgan PRIEST</strong> : Exorciste urbain, leader spirituel et stratégique de l’équipe.</li>
+    <li><strong>Thierry PEYRE</strong> : Expert en vidéosurveillance et capteurs, souvent le premier à repérer l’étrange.</li>
+    <li><strong>Lionel CAMY</strong> : Journaliste et chercheur du paranormal, rejoint la brigade en tant que guide du passé et du mystère.</li>
+    <li><strong>Ghaël</strong> : Jeune Dogman intelligent, fils du Gardien, au cœur du mystère.</li>
+    <li><strong>Le Dogman Ancien</strong> : Gardien aux yeux jaunes, mystérieux et puissant, veillant sur un secret ancestral.</li>
+  </ul>
+</section>
+
+<section id="tabledesmatieres" class="page">
+  <h2 style="text-align:center;">Table des Matières</h2>
+  <ul style="max-width: 600px; margin: auto; font-size: 1.1em; line-height: 1.8;">
+    <li><a href="#" onclick="showPage('prologue')">Prologue</a></li>
+    <li><a href="#" onclick="showPage('chapitre1')">Chapitre 1 : Les Griffes dans la Brume</a></li>
+    <li><a href="#" onclick="showPage('chapitre2')">Chapitre 2 : Empreintes du crépuscule</a></li>
+    <li><a href="#" onclick="showPage('chapitre3')">Chapitre 3 : Le Piège des Ombres</a></li>
+    <li><a href="#" onclick="showPage('chapitre4')">Chapitre 4 : L'Évasion de Minuit</a></li>
+    <li><a href="#" onclick="showPage('chapitre5')">Chapitre 5 : Présages dans le Village</a></li>
+    <li><a href="#" onclick="showPage('chapitre6')">Chapitre 6 : La Chasse du Silence</a></li>
+    <li><a href="#" onclick="showPage('chapitre7')">Chapitre 7 : Les Yeux Jaunes</a></li>
+    <li><a href="#" onclick="showPage('chapitre8')">Chapitre 8 : L’Embuscade des Deux Lunes</a></li>
+    <li><a href="#" onclick="showPage('chapitre9')">Chapitre 9 : Le QG des Révélations</a></li>
+    <li><a href="#" onclick="showPage('chapitre10')">Chapitre 10 : Le Guide du Bois-Mort</a></li>
+    <li><a href="#" onclick="showPage('chapitre11')">Chapitre 11 : L’Enfant de la Brume</a></li>
+    <li><a href="#" onclick="showPage('chapitre12')">Chapitre 12 : Le Jugement du Gardien</a></li>
+    <li><a href="#" onclick="showPage('chapitre13')">Chapitre 13 : Les Alliés de l’Ombre</a></li>
+    <li><a href="#" onclick="showPage('chapitre14')">Chapitre 14 : Le Pacte Brisé</a></li>
+    <li><a href="#" onclick="showPage('chapitre15')">Chapitre 15 : Le Cœur du Sanctuaire</a></li>
+    <li><a href="#" onclick="showPage('chapitre16')">Chapitre 16 : L’Heure du Choix</a></li>
+  </ul>
+</section>
+
+    <section id="prologue" class="page">
+  <h2>Prologue</h2>
+  <p>
+    Cathy BELLAMY, chasseuse de mystères et témoin de l’étrange,
+    vit à la lisière de la forêt de Bordes avec sa fidèle chienne border collie,
+    Tania. Depuis des mois, elle reçoit des témoignages inquiétants : des
+    créatures humanoïdes, aux yeux rouges brillants, rôdent dans la nuit… les
+    fameux Dogman.
+  </p>
+  <p>
+    Mais Cathy n’est pas seule dans cette traque.
+  </p>
+  <p>
+    Son petit-fils, Léo TRESCASES BELLAMY, génie de
+    l’informatique, a monté un centre de surveillance dans la cuisine de Cathy.
+    Caméras infrarouges, capteurs de mouvement, ordinateur à triple écran – c’est
+    le QG technologique de la Loup-Garou Mobile, un vieux van customisé pour les
+    opérations nocturnes.
+  </p>
+  <p>
+    En cas d’urgence sur les rivières ou plans d’eau où des
+    Dogman pourraient fuir, Léo COMETTI, expert en kayak et athlète du paranormal,
+    est prêt à foncer pagaie à la main pour couper leur retraite.
+  </p>
+  <p>
+    Et pour la surveillance vidéo et les dispositifs thermiques,
+    l’énigmatique Thierry s’occupe des caméras. On dit qu’il peut voir des choses
+    que personne d’autre ne voit.
+  </p>
+  <p>
+    Mais le chef de l’escouade, c’est Morgan Priest, exorciste
+    urbain et guerrier de la foi. Armé d’un crucifix, d’une Bible et d’une machette
+    bénie, il coordonne les missions.
+  </p>
+  <p>
+    Tous ensemble, à bord de la Loup-Garou Mobile, ils traquent
+    l’invisible, affrontent les ténèbres et enquêtent sur les traces du Dogman.
+  </p>
+  <p>
+    Une seule règle : si tu entends hurler dans la nuit… ne
+    sors pas.
+  </p>
+</section>
+
+    <section id="chapitre1" class="page">
+  <h2>Chapitre 1 : Les Griffes dans la Brume</h2>
+
+  <p>Il était 23h47. Le ciel était bas, le brouillard si dense qu’on ne distinguait plus le bout du jardin de Cathy. La vieille horloge en bois du salon battait lentement, comme pour annoncer quelque chose. Une nuit pas comme les autres.</p>
+
+  <p>Tania, la border collie noire et blanche, grognait doucement, couchée près de la porte-fenêtre. Ses oreilles se dressaient à chaque bruit, et son regard était rivé vers l’extérieur. Cathy BELLAMY, assise sur son fauteuil en osier, sentait la tension monter. Elle connaissait Tania : quand elle grognait comme ça, ce n’était pas un chat, ni un renard. Non. Quelque chose rôdait. Quelque chose… d’inquiétant.</p>
+
+  <p>Elle attrapa son téléphone à clapet et appela son petit-fils :</p>
+
+  <p class="dialogue">— Léo, c’est mamie. Tania grogne depuis tout à l’heure. Elle regarde vers le champ. T’as activé les caméras ?</p>
+
+  <p>Quelques secondes plus tard, Léo TRESCASES BELLAMY, depuis sa chambre transformée en mini data-center, tapait furieusement sur son clavier. Trois écrans affichaient en direct les flux vidéo infrarouges des caméras thermiques installées autour de la maison de Cathy.</p>
+
+  <p class="dialogue">— Attends… Je vois un mouvement… Caméra 3, côté du vieux puits. Il y a… quelque chose, mamie. Quelque chose de grand.</p>
+
+  <p>Sur l’écran, une silhouette sombre passait furtivement. Trop grande pour un homme. Trop fine pour un ours. Une forme bipède… avec un museau.</p>
+
+  <p class="dialogue">— C’est lui, Léo… C’est un Dogman.</p>
+
+  <hr class="separator">
+
+  <p>Pendant ce temps, Léo COMETTI, en train de ranger son kayak dans son garage à Pau, reçut un message codé : « Code LGM-13 : activation Loup-Garou Mobile. » Il leva les yeux au ciel, soupira et enfila sa veste de combat fluo réfléchissante, attrapa sa pagaie multifonction et fonça vers Bordes.</p>
+
+  <p>De son côté, Thierry, qui surveillait les caméras secondaires, analysait les dernières vidéos stockées. Il mit sur pause une séquence. Son visage blêmit. On voyait clairement deux yeux rouges briller dans la brume, juste avant que la caméra ne se brouille subitement.</p>
+
+  <p class="dialogue">— Ils sont plus proches qu’on ne le croyait…</p>
+
+  <hr class="separator">
+
+  <p>À minuit pile, les phares de la Loup-Garou Mobile s’allumèrent dans l’allée de Cathy. Morgan Priest descendit du véhicule, croix au cou, long manteau en cuir flottant dans la nuit. Il posa une main sur l’épaule de Cathy.</p>
+
+  <p class="dialogue">— Cette fois, Cathy… on va aller jusqu’au bout. Ce Dogman, on va le trouver.</p>
+
+  <p>Elle hocha la tête, tandis que Tania aboyait à pleine gorge.</p>
+
+  <p>L’aventure venait de commencer. Et le danger rôdait… juste derrière la brume.</p>
+</section>
+
+
+
+    <section id="chapitre2" class="page">
+  <h2>Chapitre 2 : Empreintes du crépuscule</h2>
+
+  <p>Le jour s’était levé sur Bordes, mais la brume, elle, refusait de partir. Une brume tenace, presque surnaturelle, comme si la nuit refusait de lâcher prise. La terre était humide, les feuilles trempées, et l’air sentait la mousse et l’angoisse.</p>
+
+  <p>Cathy, bottes aux pieds, sortit avec Tania. La chienne filait droit vers le vieux puits. Elle reniflait frénétiquement, puis s’arrêta net, grognant, le poil hérissé.</p>
+
+  <span class="dialogue">— Qu’est-ce que t’as senti, ma belle ?</span>
+
+  <p>Puis Cathy les vit. Juste là, dans la boue fraîche : des empreintes.</p>
+
+  <p>Mais ce n’étaient pas des empreintes normales.</p>
+
+  <p>C’était énorme. Quatre doigts griffus, un talon allongé, comme un pied de loup… mais de taille humaine. Et il y en avait plusieurs. Certaines montaient vers la forêt, d’autres… semblaient tourner autour de la maison. Un cercle. Une ronde étrange.</p>
+
+  <p>Cathy sortit son téléphone :</p>
+
+  <span class="dialogue">— Léo, viens vite avec ton drone. Et appelle les autres.</span>
+
+  <hr class="separator">
+
+  <p>Une heure plus tard, la Loup-Garou Mobile était garée dans la cour. Léo, avec sa tablette, pilotait son drone au-dessus des arbres, pendant que Thierry posait des capteurs sonores dans les zones boisées. Léo Cometti, bien qu’un peu hors de son élément sans pagaie, vérifiait les zones marécageuses en bordure avec un détecteur de mouvement portable.</p>
+
+  <span class="dialogue">— J’ai une trace thermique dans le bois nord, annonça Léo. Quelque chose bouge à faible allure, comme s’il nous surveillait.</span>
+
+  <p>Morgan Priest serra son crucifix. Il regarda Cathy, puis les arbres.</p>
+
+  <span class="dialogue">— On n’est pas les chasseurs aujourd’hui. On est la proie.</span>
+
+  <p>Ils décidèrent de se séparer en binômes. Morgan et Cathy prirent le chemin des anciennes ruines en haut de la colline. Léo et Thierry s’enfoncèrent dans le bois avec des lampes UV, pendant que Léo Cometti resta près du ruisseau, prêt à bloquer tout passage.</p>
+
+  <hr class="separator">
+
+  <p>Le silence était pesant. Même les oiseaux semblaient avoir déserté.</p>
+
+  <p>Dans les bois, Thierry s’arrêta.</p>
+
+  <span class="dialogue">— Tu sens ça ?</span>
+
+  <p>Léo acquiesça. Une odeur immonde, comme du chien mouillé, mélangé à du sang séché.</p>
+
+  <p>Puis un craquement.</p>
+
+  <p>Quelque chose venait de bouger.</p>
+
+  <p>Ils se retournèrent. Et là, entre deux troncs, une silhouette noire… elle les regardait.</p>
+
+  <p>Mais quand Léo pointa sa lampe, elle avait disparu.</p>
+
+  <p>Seulement restait… une griffe. Plantée dans un tronc. Trois longues marques, encore fumantes.</p>
+
+  <span class="dialogue">— Il est là… et il se moque de nous, murmura Thierry.</span>
+
+  <hr class="separator">
+
+  <p>Dans les ruines, Cathy posa la main sur un vieux mur de pierre. Morgan marchait devant.</p>
+
+  <p>Puis il s’arrêta, net.</p>
+
+  <p>Sur le sol, des plumes noires. Et au milieu… une touffe de poils gris, poisseuse de sang.</p>
+
+  <p>Tania se mit à hurler à la mort.</p>
+
+  <p>Morgan dégaina sa machette bénie.</p>
+
+  <span class="dialogue">— Ce n’est plus une simple traque. C’est une déclaration de guerre.</span>
+
+  <p>Et dans les arbres… un hurlement se fit entendre.</p>
+
+  <p>Loup ? Non.</p>
+
+  <p>Dogman.</p>
+</section>
+
+
+
+   <section id="chapitre3" class="page">
+  <h2>Chapitre 3 : Le Piège des Ombres</h2>
+
+  <p>La nuit tombait de nouveau sur Bordes. Une nuit sans lune, où chaque arbre semblait avoir une silhouette, chaque branche un regard. Les membres de l’équipe se rassemblèrent dans la grange de Cathy, devenue quartier général temporaire.</p>
+
+  <p>L’ambiance était grave. Sur une grande carte étalée sur la table, Léo avait marqué toutes les zones de passage du Dogman avec des punaises rouges. Le cercle était clair : le Dogman rôdait toujours autour de la maison.</p>
+
+  <p class="dialogue">— Il cherche quelque chose, dit Léo. Ou bien… quelqu’un.</p>
+
+  <p>Cathy fronça les sourcils. Tania était couchée à ses pieds, tendue comme un arc. Elle n’avait pas mangé depuis le matin. Elle savait que cette nuit serait spéciale.</p>
+
+  <p class="dialogue">— Alors on va l’attendre, déclara Morgan en posant une énorme cage renforcée sur la table. Mais à nos conditions.</p>
+
+  <hr class="separator">
+
+  <p>Le plan était simple.</p>
+
+  <p>Dans le champ derrière la maison, ils installèrent un appât : un vieux jambon cru accroché à une corde, au centre d’un cercle de capteurs et de pièges discrets. La cage, ouverte, était dissimulée dans l’ombre d’un vieux tracteur.</p>
+
+  <p>Léo Cometti, en tenue de camouflage (et un peu ridicule avec ses bottes de kayak), surveillait depuis la cabane à outils, équipé d’une sarbacane tranquillisant construite par Léo lui-même.</p>
+
+  <p>Thierry, posté plus loin avec une caméra thermique, surveillait l’approche.</p>
+
+  <p>Morgan et Cathy, eux, restaient dans la grange, prêts à refermer le piège à distance avec un mécanisme relié à la cage.</p>
+
+  <p>Et Léo ? Il était au centre de tout ça, dans la Loup-Garou Mobile, entouré d’écrans, surveillant chaque mouvement, chaque souffle.</p>
+
+  <p>Le silence était pesant.</p>
+
+  <p>Jusqu’à 02h12.</p>
+
+  <p><strong>Un bip.</strong></p>
+
+  <p class="dialogue">— Mouvement détecté. Caméra 4, à l’est.</p>
+
+  <p>Sur l’écran, une silhouette. Longue, agile, se déplaçant à quatre pattes… puis debout.</p>
+
+  <p>Il approchait.</p>
+
+  <p class="dialogue">— Il est là. Il nous sent. Il regarde… droit dans la caméra, murmura Thierry dans le talkie.</p>
+
+  <p>Puis le signal se brouilla.</p>
+
+  <hr class="separator">
+
+  <p>Dans le champ, l’appât commença à balancer légèrement. Le piège était prêt.</p>
+
+  <p>Mais soudain… un cri.</p>
+
+  <p>Pas humain.<br>
+  Pas animal non plus.</p>
+
+  <p>Léo Cometti leva sa sarbacane. Un souffle. Une fléchette partit. <strong>Touché.</strong></p>
+
+  <p>La créature hurla et bondit en arrière.</p>
+
+  <p class="dialogue">— FERMEZ LA CAGE ! MAINTENANT ! cria Léo.</p>
+
+  <p>Morgan actionna le levier. La cage se referma… mais vide.</p>
+
+  <p>Un souffle glacé parcourut le champ.</p>
+
+  <p>Et là, derrière Cometti, une ombre surgit.</p>
+
+  <p>Mais au moment de l’attaque, <strong>Tania jaillit</strong>, crocs dehors, pour défendre l’ami de la famille. Elle mordit la jambe de la créature, qui hurla de rage.</p>
+
+  <p>La lumière du projecteur s’alluma, et enfin, tous le virent.</p>
+
+  <p><strong>Deux mètres de haut. Un corps de loup, une démarche humaine. Des yeux rouges comme la braise.</strong></p>
+
+  <p>Le Dogman.</p>
+
+  <p>Mais il était blessé. La fléchette faisait effet.</p>
+
+  <p class="dialogue">— Maintenant ou jamais ! cria Cathy.</p>
+
+  <p>Morgan bondit avec un filet lourd, Thierry balança une seconde fléchette, et Léo lança un drone éclaireur pour désorienter la bête.</p>
+
+  <p>Après plusieurs secondes d’affrontement tendu, la créature tomba.</p>
+
+  <p><strong>Endormie.</strong></p>
+
+  <p>Ils l’avaient capturée.</p>
+
+  <p>Mais le regard que le Dogman lança, juste avant de s’évanouir…</p>
+
+  <p><strong>C’était un regard humain.</strong></p>
+</section>
+
+
+
+<section id="chapitre4" class="page">
+  <h2>Chapitre 4 : L'Évasion de Minuit</h2>
+
+  <p>Le Dogman dormait. Enfin… c’est ce qu’ils croyaient.</p>
+
+  <p>Dans la grange, on l’avait enfermé dans une cage blindée renforcée avec des chaînes en titane. Morgan avait même disposé des symboles religieux autour, au cas où. Thierry avait connecté des capteurs cardiaques. Tout semblait stable.</p>
+
+  <p>La créature respirait lentement, posée dans un coin sombre de la cage. Son pelage était noir, hérissé par endroits, taché de sang séché. Sa respiration faisait trembler légèrement les barreaux. Même inconscient, il imposait une peur ancestrale.</p>
+
+  <p class="dialogue">— C’est pas une bête normale, souffla Cathy. Je le sens dans mes os.</p>
+
+  <p>Léo l’observait via une caméra intérieure.</p>
+
+  <p class="dialogue">— Son rythme cardiaque est… bizarre. Lent, mais pas… naturel.</p>
+
+  <hr class="separator">
+
+  <p>Puis, à 03h42… tout a basculé.</p>
+
+  <p>Un à un, les capteurs s’affolèrent.</p>
+
+  <p class="dialogue">— Chute de température. Baisse brutale du rythme cardiaque. Il se passe quelque chose ! cria Léo.</p>
+
+  <p>Un frisson traversa tous ceux présents. Tania aboya violemment et se mit à gratter la porte de la grange.</p>
+
+  <p>Morgan courut vers la cage. Thierry dégaina son pistolet à fléchettes. Cathy tenait sa lampe UV allumée.</p>
+
+  <p><em>Mais il était trop tard.</em></p>
+
+  <p>Un grincement. Un gémissement métallique.</p>
+
+  <p>Puis un bruit sourd. Comme un battement d’ailes dans le noir.</p>
+
+  <p><em>Et soudain… plus rien.</em></p>
+
+  <hr class="separator">
+
+  <p>Quand ils ouvrirent les portes de la pièce sécurisée, la cage était ouverte.</p>
+
+  <p>Les chaînes… tordues.</p>
+
+  <p>La porte… arrachée de l’intérieur.</p>
+
+  <p>Et dans la terre battue de la grange, une seule trace laissée derrière : une empreinte griffue… et une main humaine posée à côté.</p>
+
+  <p>Morgan ramassa un morceau de la chaîne brisée.</p>
+
+  <p class="dialogue">— Il s’est transformé… ou il n’était jamais vraiment endormi.</p>
+
+  <p>Léo, pâle, regardait les images de la caméra. Juste avant la coupure, on voyait les yeux du Dogman s’ouvrir. Fixes. Glacés. Puis un sourire. Un rictus tordu, presque moqueur.</p>
+
+  <p class="dialogue">— Il nous a eus, murmura-t-il.</p>
+
+  <p>Dans la forêt voisine, un hurlement sinistre monta, plus long, plus grave qu’avant.</p>
+
+  <p><em>La créature était libre.</em></p>
+
+  <p><em>Et cette fois… elle connaissait leurs visages.</em></p>
+</section>
+
+
+<section id="chapitre5" class="page">
+  <h2>Chapitre 5 : Présages dans le Village</h2>
+
+  <p>Les jours suivants furent étrangement calmes.</p>
+
+  <p>Trop calmes.</p>
+
+  <p>À Bordes, le soleil brillait mollement, les oiseaux revenaient chanter… mais quelque chose clochait. Les gens le sentaient, sans pouvoir l’expliquer. Comme si l’air était devenu plus lourd, les ombres plus épaisses.</p>
+
+  <p>Au café du village, les anciens parlaient à voix basse. Une vieille dame jurait avoir vu un homme marcher à quatre pattes dans son jardin… nu, et très grand. Un autre disait que ses poules avaient disparu, sans une seule plume au sol.</p>
+
+  <hr class="separator">
+
+  <p>Mais ce n’était que le début.</p>
+
+  <p>Le lundi matin, la cloche de l’église se mit à sonner toute seule. À 5h06 du matin.</p>
+
+  <p>Quand le curé arriva, il trouva la corde tranchée net… et des griffures dans le bois, hautes de plus d’un mètre cinquante.</p>
+
+  <hr class="separator">
+
+  <p>Le mardi, un agriculteur découvrit son troupeau de moutons regroupé en cercle, silencieux, les yeux ouverts… figés. Aucun n’était mort, mais tous semblaient… traumatisés.</p>
+
+  <hr class="separator">
+
+  <p>Le mercredi soir, Thierry, depuis son PC portable, analysait une caméra placée près d’un sentier forestier. À 02h17, un brouillard s’épaissit sur l’image… puis un flash. Une silhouette passa devant. Rapide. Invisible à l’œil nu, mais bien présente dans les infrarouges.</p>
+
+  <p>Et un message. Gravé sur un tronc proche, avec des griffes ou un couteau :</p>
+
+<blockquote class="special-quote">« Vous m’avez trouvé. Maintenant c’est mon tour. »</blockquote>
+
+  <hr class="separator">
+
+  <p>Cathy aussi fut témoin. Une nuit, elle se réveilla brusquement. Tania grognait dans son sommeil. Sur la fenêtre embuée de sa chambre, une forme… une main griffue. Comme si quelqu’un ou quelque chose l’avait observée de l’extérieur. Mais quand elle alluma la lumière, il n’y avait plus rien. Juste une empreinte. À l’envers.</p>
+
+  <p><span class="dialogue">Comme si elle était à l’intérieur.</span></p>
+
+  <hr class="separator">
+
+  <p>Léo, de son côté, passait ses nuits à analyser les flux vidéo et les anomalies magnétiques. Il avait repéré un schéma : chaque événement se rapprochait du centre du village. Bordes devenait un point rouge sur sa carte.</p>
+
+  <p>Et le 6e jour, il trouva un fichier étrange sur son disque dur. Nommé <em>“D0GM4N.MP4”</em>. Il ne l’avait jamais téléchargé.</p>
+
+  <p>Il l’ouvrit.</p>
+
+  <p>Une vidéo. Filmée en vision nocturne.</p>
+
+  <p>Lui, endormi dans sa chambre.</p>
+
+  <p>Quelqu’un l’avait filmé.</p>
+
+  <p>Et dans le coin, une ombre. Immobile.</p>
+
+  <p>Puis, un grognement.</p>
+
+  <p>Et l’écran devint noir.</p>
+
+  <hr class="separator">
+
+  <p><strong>Le message était clair :</strong><br>
+  le Dogman jouait avec eux.<br>
+  Et il n’allait pas se contenter de fuir.</p>
+
+  <p><strong>Il préparait quelque chose.</strong></p>
+</section>
+
+
+<section id="chapitre6" class="page">
+  <h2>Chapitre 6 : La Chasse du Silence</h2>
+
+  <p>Minuit.<br>
+  La Loup-Garou Mobile rugit dans la nuit noire, roulant à toute vitesse sur les chemins forestiers. Les pneus mordaient la boue. À bord, les visages étaient graves. Plus personne ne doutait de la menace. Le Dogman ne se cachait plus… il les provoquait.</p>
+
+  <p>Morgan Priest était en tête, carte en main, lunettes thermiques sur les yeux. À côté de lui, Léo vérifiait les données GPS et les capteurs. À l’arrière, Cathy préparait des fioles d’herbes qu’elle appelait ses "potions de l’ancien monde". Thierry, concentré, reconfigurait les détecteurs à fréquence animale.</p>
+
+  <p>Et Léo Cometti, attachait calmement des gilets tactiques sur les sièges. Ce soir, ce n’était plus un jeu. Il n’y avait plus de kayak. C’était la guerre invisible.</p>
+
+  <hr class="separator">
+
+  <p>Le signal avait été capté à 23h44 : un hurlement strident, enregistré par trois micros placés autour du vieux cimetière abandonné de Bordes.</p>
+
+  <p>C’était là-bas qu’ils allaient.</p>
+
+  <p>La forêt était oppressante. Les arbres semblaient se pencher sur eux, et le vent portait des murmures.</p>
+
+  <p>— On est proches, dit Léo. Il bouge. Il sait qu’on arrive.</p>
+
+  <p>Morgan ordonna l’arrêt du véhicule. Ils continueraient à pied. Plus discrets. Plus silencieux.</p>
+
+  <p>Chacun prit son rôle.</p>
+
+  <p>— Cathy et moi, on longe le sentier par le nord, dit Morgan.<br>
+  — Thierry, Léo Cometti et toi, vous couvrez le sud, ajouta-t-il en regardant Léo.<br>
+  — Et Tania reste avec moi, dit Cathy. Elle sait quand il est là.</p>
+
+  <hr class="separator">
+
+  <p>Ils s’enfoncèrent dans les bois.</p>
+
+  <p>La nuit était d’un silence presque surnaturel. Pas un cri de chouette. Pas un bruissement. Juste leurs pas. Et le bip… bip… bip régulier du capteur.</p>
+
+  <p>Puis soudain : un cri. Lointain. Humain.</p>
+
+  <p>— Ça vient du vieux clocher ! cria Léo Cometti dans le talkie.</p>
+
+  <p>Ils coururent.</p>
+
+  <p>Arrivés en bordure de la clairière, ils virent une silhouette. Un homme… attaché à une croix de bois. Mais à mesure qu’ils approchaient…</p>
+
+  <p>Il disparut.</p>
+
+  <p>Une illusion.</p>
+
+  <p>Et derrière eux, un grognement.</p>
+
+  <p>Il était là.</p>
+
+  <hr class="separator">
+
+  <p>Le Dogman jaillit de l’ombre comme un éclair. Il attrapa Thierry par le bras et le projeta contre un arbre. Cathy hurla. Tania sauta à la gorge de la créature pour le détourner. Morgan leva son fusil à fléchettes, tira… Touché !</p>
+
+  <p>Mais le Dogman ne tomba pas.</p>
+
+  <p>Il recula. Grognant. Blessé, mais furieux.</p>
+
+  <p>Puis, d’un bond impossible… il disparut dans les arbres.</p>
+
+  <p>Léo courut vers Thierry. Il respirait, groggy, le bras en sang, mais vivant.</p>
+
+  <p>— Il joue encore avec nous. Il veut nous fatiguer, grogna Morgan.</p>
+
+  <hr class="separator">
+
+  <p>Léo releva la tête. Il voyait quelque chose dans les branches. Des symboles. Des signes gravés à la hâte, récents.</p>
+
+  <p>— Il nous attire quelque part. Il nous piège.</p>
+
+  <p>Mais Cathy, elle, fixait le sol. Des empreintes… mais pas que.</p>
+
+  <p>Une chaîne. Celle de la cage.</p>
+
+  <p>Et une trace de main humaine. Celle d’un enfant.</p>
+
+  <p>— Il n’est peut-être pas seul…</p>
+</section>
+
+
+<section id="chapitre7" class="page">
+  <h2>Chapitre 7 : Les Yeux Jaunes</h2>
+
+  <p>L’équipe était de retour dans la grange. Thierry, allongé sur une table, avait le bras bandé, les traits tirés. Tania, couchée à côté, veillait sur lui. Cathy, elle, était ailleurs.</p>
+
+  <p>Son regard était perdu dans le vide.</p>
+
+  <p class="dialogue">— Qu’est-ce qu’il y a, mamie ? demanda Léo, inquiet.</p>
+
+  <p>Elle répondit d’une voix sourde, presque tremblante :</p>
+
+  <p class="dialogue">— Ce n’est pas lui.</p>
+
+  <p>Un silence s’installa.</p>
+
+  <p class="dialogue">— Celui qu’on a vu, celui qu’on chasse depuis des jours… ce n’est pas celui que j’ai vu, moi.</p>
+
+  <hr class="separator">
+
+  <p>Morgan fronça les sourcils. Léo s’approcha.</p>
+
+  <p class="dialogue">— Tu l’as déjà vu ? Quand ?</p>
+
+  <p>Cathy hocha la tête.</p>
+
+  <p class="dialogue">— C’était en 2004. Je vivais déjà ici. Il y avait un soir, vers la Toussaint… un épais brouillard. J’avais entendu du bruit dans la cour. Tania, la première du nom, aboyait. Je suis sortie avec une lampe. Et je l’ai vu.</p>
+
+  <p>Elle fit une pause.</p>
+
+  <p class="dialogue">— Il était plus grand que celui-là. Plus maigre. Il ne grognait pas. Il me regardait… avec des yeux jaunes. Froids. Intelligents. Il n’a pas bougé. Et puis… il a disparu dans le brouillard.</p>
+
+  <hr class="separator">
+
+  <p>Léo recula. Il comprenait enfin.</p>
+
+  <p class="dialogue">— Ils sont deux.</p>
+
+  <p>Morgan serra les poings.</p>
+
+  <p class="dialogue">— Et peut-être que celui d’aujourd’hui est… le plus jeune. Un rejeton. Un apprenti chasseur. L’autre, celui des yeux jaunes, c’est le maître.</p>
+
+  <p>Thierry, malgré la douleur, réussit à parler :</p>
+
+  <p class="dialogue">— Ça explique leur façon de faire. Le premier nous teste… pendant que l’autre… prépare quelque chose.</p>
+
+  <hr class="separator">
+
+  <p>Léo lança alors une nouvelle analyse sur les enregistrements sonores des nuits précédentes. Il isola deux hurlements… et les superposa.</p>
+
+  <p>Deux fréquences. Deux timbres différents.</p>
+
+  <p>La preuve était là.</p>
+
+  <hr class="separator">
+
+  <p>Cette nuit-là, dans les bois, une caméra thermique captura une nouvelle silhouette.</p>
+
+  <p>Plus grande.</p>
+  <p>Plus mince.</p>
+  <p>Et, dans l’obscurité… deux points jaunes brillèrent brièvement à travers les branches.</p>
+
+  <hr class="separator">
+
+  <p>Dans un vieux cahier retrouvé par Morgan, daté de 1956, il lut une phrase écrite à la main, à moitié effacée :</p>
+
+  <p class="fleche-dialogue">➢ “Quand les yeux jaunes s’ouvrent, c’est que le temps des Hommes touche à sa fin.”</p>
+
+  <hr class="separator">
+
+  <p>Le vrai chasseur était enfin réveillé.</p>
+
+  <p>Et il n’était pas content.</p>
+</section>
+
+
+
+<section id="chapitre8" class="page">
+  <h2>Chapitre 8 : L’Embuscade des Deux Lunes</h2>
+
+  <p>La pleine lune était attendue pour ce soir-là. Pas une, mais deux lunes s’étaient formées dans le ciel. L’une était pâle, réelle. L’autre… un reflet étrange, distordu, comme une illusion venue d’un autre monde.</p>
+
+  <p>Les anciens du village restaient enfermés chez eux. Les animaux ne sortaient plus. Même les chiens des voisins gémissaient à l’unisson.</p>
+
+  <p>L’équipe savait que ce soir, quelque chose allait se passer.</p>
+
+  <p>Mais elle ne savait pas que le piège s’était déjà refermé.</p>
+
+  <hr class="separator">
+
+  <p>Tout commença avec un signal faible.</p>
+
+  <p>Une alarme déclenchée à l’orée de la forêt, zone sud. Des empreintes. Encore.</p>
+
+  <p>— Il est de retour, dit Morgan. On le prend ce soir. Tous ensemble.</p>
+
+  <p>Ils partirent à six : Morgan, Cathy, Léo, Léo Cometti, Thierry (malgré son bras blessé) et Tania.</p>
+
+  <p>Le sentier était étroit. La forêt noire comme du charbon. Pas un souffle. Pas un cri.</p>
+
+  <p>Léo gardait un œil sur son écran thermique.</p>
+
+  <p>— Il est là… non… il y en a deux. Deux signatures thermiques. C’est pas possible…</p>
+
+  <p>Trop tard.</p>
+
+  <hr class="separator">
+
+  <p>Un hurlement surgit de nulle part, glaçant les sangs. Tania se mit à grogner comme jamais. Léo Cometti brandit sa lampe, et dans le halo : une silhouette. Le jeune Dogman.</p>
+
+  <p>Mais derrière eux, dans le silence… une autre ombre apparut.</p>
+
+  <p>Plus grande. Plus fine. Les yeux jaunes.</p>
+
+  <p>Ils étaient encerclés.</p>
+
+  <p>Morgan hurla :</p>
+  <p class="dialogue">— En cercle ! Dos à dos ! Ne paniquez pas !
+  </p>
+
+  <p>Mais les créatures ne foncèrent pas. Elles tournaient lentement autour d’eux. Les lumières vacillaient. Les talkies grésillaient.</p>
+
+  <p>Puis soudain, le jeune Dogman chargea. Léo Cometti tomba à terre, évité de justesse par la bête. Thierry tira une fléchette, mais la créature la dévia d’un coup de griffe.</p>
+
+  <p>Cathy hurla. Elle venait d’être griffée à l’épaule.</p>
+
+  <p>Tania bondit sur le Dogman, l’éloignant un instant.</p>
+
+  <p>Mais c’est alors que l’Ancien entra en scène.</p>
+
+  <p>Le Dogman aux yeux jaunes.</p>
+
+  <p>Il se tenait à quelques mètres, droit, comme un homme. Il observa Morgan. Puis parla. Pas avec des mots… mais avec une voix dans leur tête.</p>
+
+  <p class="fleche-dialogue">➢ « Vous auriez dû rester loin d’ici. Cette forêt n’est pas à vous. Elle ne l’a jamais été. »</p>
+
+  <p>Tout le groupe fut figé. Une terreur inexplicable les traversa. Le froid, le poids, la peur viscérale. Le silence absolu.</p>
+
+  <p>Mais Léo, malgré la panique, pensa vite.</p>
+
+  <p>Il activa un dispositif sonore expérimental qu’il avait mis au point la veille : un émetteur de fréquences ultra-hautes.</p>
+
+  <p>Un cri assourdissant remplit la forêt. Les deux Dogmen hurlèrent de douleur.</p>
+
+  <p>L’ancien disparut dans les brumes.</p>
+
+  <p>Le jeune recula. Blessé. Tania, grognant encore, le repoussa jusqu’au ruisseau.</p>
+
+  <hr class="separator">
+
+  <p>Le calme revint. Les lampes grésillaient. Cathy saignait. Thierry tombait presque d’épuisement. Cometti aidait Morgan à se relever.</p>
+
+  <p>Léo, le souffle court, éteignit lémetteur.</p>
+
+  <p>— C’était un piège… Ils nous attendaient.</p>
+
+  <p>Morgan leva les yeux vers le ciel.</p>
+
+  <p>Les deux lunes avaient disparu.</p>
+
+  <p>Et il le savait : ce n’était que le début.</p>
+</section>
+
+<section id="chapitre9" class="page">
+  <h2>Chapitre 9 : Le QG des Révélations</h2>
+
+  <p>L’aube grise filtrait à peine à travers les arbres que déjà, la Loup-Garou Mobile roulait en direction de la grange de Cathy, devenue QG central.</p>
+
+  <p>Personne ne parlait.</p>
+
+  <p>Cathy, blessée à l’épaule, fixait le vide. Thierry, pâle comme un linge, se tenait le bras. Morgan regardait fixement la route, mâchoire serrée. Léo Cometti tenait Tania contre lui, encore tremblante.</p>
+
+  <p>Et Léo, lui, fixait son écran… où les dernières images de l’embuscade tournaient en boucle.</p>
+
+  <hr class="separator">
+
+  <p>Deux Dogmen. Deux styles. Deux énergies.</p>
+
+  <p>Mais une même intention : protéger quelque chose… ou préparer une offensive.</p>
+
+  <hr class="separator">
+
+  <p>À peine arrivés, Léo brancha tous les systèmes au générateur. Les caméras thermiques, les disques de sauvegarde, les capteurs, et surtout… le module audio qui avait fait fuir l’ancien.</p>
+
+  <p class="dialogue">— Ça a fonctionné, dit-il. Leur fréquence cérébrale réagit à certaines ondes. C’est comme si on leur criait directement dans le cerveau.</p>
+
+  <p>Morgan hocha la tête.</p>
+
+  <p class="dialogue">— Mais on ne peut pas se contenter de leur faire mal. Il faut savoir ce qu’ils sont. Pourquoi maintenant ? Pourquoi ici ?</p>
+
+  <hr class="separator">
+
+  <p>Cathy, assise dans un vieux fauteuil, parla enfin.</p>
+
+  <p class="dialogue">— Ils ne sont pas là pour nous chasser. Pas encore. Ils gardent quelque chose. Et si c’est le même que j’ai vu en 2004, alors ça fait 20 ans qu’ils vivent ici. Cachés.</p>
+
+  <p>Léo se leva, prit un vieux dossier poussiéreux. Il l’avait trouvé dans une trappe sous les planches de la grange. Il le posa sur la table.</p>
+
+  <p class="dialogue">— C’est un ancien rapport de 1987. De la mairie de Bordes. Il parle d’une “zone interdite”, appelée le Bois-Mort. Fermée au public pour “raisons de sécurité naturelle”.</p>
+
+  <p>Il ouvrit une page.</p>
+
+  <p>Des photos en noir et blanc. Une ancienne expédition. Des hommes armés. Et au fond d’une grotte… un mur gravé de symboles, avec deux silhouettes.</p>
+
+  <p>Une grande. Une petite. Légendées : <em>“Le Gardien” et “L’Éclaireur”.</em></p>
+
+  <hr class="separator">
+
+  <p class="dialogue">— Ça y est, murmura Morgan. Le jeune Dogman, c’est l’Éclaireur. L’autre… c’est le Gardien. Ils ne nous attaquent pas pour nous tuer. Ils nous repoussent. Ils protègent quelque chose.</p>
+
+  <p class="dialogue">— Ou… quelqu’un.</p>
+
+  <hr class="separator">
+
+  <p>Silence.</p>
+
+  <p>Puis Thierry, malgré son état, murmura :</p>
+
+  <p class="dialogue">— Et si ce n’était pas eux… les monstres ?</p>
+
+  <p>Un silence lourd tomba dans la pièce.</p>
+
+  <p>Le Dogman Ancien avait parlé dans leurs têtes. Il avait communiqué. Avec colère, oui, mais aussi avec… logique.</p>
+
+  <p>Pas comme une bête.</p>
+
+  <p>Comme un être conscient.</p>
+
+  <hr class="separator">
+
+  <p>Cette nuit-là, personne ne dormit.</p>
+
+  <p>Chacun réfléchissait, préparait, observait. Léo optimisait ses systèmes, Cathy relisait ses vieux journaux, Morgan nettoyait ses armes, Thierry triait les vidéos image par image.</p>
+
+  <p>Et dans le ciel noir… une brume s’élevait encore du Bois-Mort.</p>
+
+  <p>Comme un appel.</p>
+
+  <p>Un avertissement.</p>
+
+  <p>Ou une invitation.</p>
+</section>
+
+
+
+<section id="chapitre10" class="page">
+  <h2>Chapitre 10 : Le Guide du Bois-Mort</h2>
+
+  <p>Le lendemain, alors que le brouillard ne s’était toujours pas levé, un véhicule se gara devant la grange de Cathy. Un 4x4 noir, poussiéreux, avec un autocollant sur la vitre arrière : « Projet Paranormal – Vérités Oubliées. »</p>
+
+  <p>Un homme en descendit.</p>
+
+  <p>Grand, barbe de trois jours, manteau kaki, sac de terrain en bandoulière. Il portait un regard vif, presque trop vif, comme s’il lisait dans l’invisible.</p>
+
+  <p><span class="fleche-dialogue">—</span> Lionel Camy, dit-il en serrant la main de Morgan. Je crois qu’on a des Dogmen à attraper.</p>
+
+  <hr class="separator">
+
+  <p>Lionel avait été contacté en urgence par Léo, après l’analyse des symboles découverts dans les images du rapport de 1987. Il avait vu ces symboles ailleurs : dans des grottes perdues de Louisiane, sur des ruines interdites au Canada, et dans des grimoires presque effacés de l’époque médiévale.</p>
+
+  <p><span class="fleche-dialogue">—</span> Vous avez réveillé quelque chose de très ancien, dit-il. Et vous avez de la chance qu’ils ne vous aient pas démembrés. Le Dogman Ancien, celui aux yeux jaunes… c’est un Gardien. Un protecteur. Il veille sur des territoires sacrés, ou des portails. Sauf que cette fois, je crois qu’il garde un… passage.</p>
+
+  <p>Un frisson parcourut le groupe.</p>
+
+  <p>Cathy se leva.</p>
+
+  <p><span class="fleche-dialogue">—</span> Alors qu’est-ce qu’on attend ? On y va. Au Bois-Mort.</p>
+
+  <hr class="separator">
+
+  <p>Guidés par Lionel, l’équipe se mit en route.</p>
+
+  <p>Ils passèrent la barrière effondrée, les panneaux “Interdit au public” rongés par le temps. La forêt ici était différente. Le sol était spongieux, les arbres tordus, comme s’ils se courbaient sous un poids invisible.</p>
+
+  <p>Puis ils virent les marques.</p>
+
+<ul class="liste-histoire">
+  <li>Une forêt, il y a très longtemps.</li>
+  <li>Des Dogmen, vivant paisiblement.</li>
+  <li>Des humains qui viennent avec le feu, la peur, les armes.</li>
+  <li>Des combats. Des pertes. Des hurlements.</li>
+</ul>
+
+
+  <p><span class="fleche-dialogue">—</span> La grotte est juste derrière, dit Lionel. Mais si vous entrez, il n’y aura pas de retour en arrière. Ce n’est pas un simple abri… C’est un sanctuaire.</p>
+
+  <p>Ils entrèrent.</p>
+
+  <hr class="separator">
+
+  <p>L’intérieur était froid, silencieux.</p>
+
+  <p>Sur les murs, des peintures rupestres représentant des bêtes mi-hommes, mi-loups, entourées d’un cercle de feu.</p>
+
+  <p>Mais au fond de la grotte… un symbole était gravé profondément dans la roche : deux paires d’yeux, une jaune, une rouge.</p>
+
+  <p>Et en dessous, écrit dans une ancienne langue, que Lionel traduisit :</p>
+
+  <blockquote>
+    ➢ “Quand les deux veillent, l’équilibre tient. <br>
+    Si l’un tombe, l’ombre revient.”
+  </blockquote>
+
+  <hr class="separator">
+
+  <p>Un craquement derrière eux.</p>
+
+  <p>Tania grogna.</p>
+
+  <p>Et dans l’obscurité de l’entrée… une silhouette se dessina.</p>
+
+  <p>Griffes. Pelage.</p>
+
+  <p>Le jeune Dogman.</p>
+
+  <p>Mais il ne grognait pas.<br>
+  Il les regardait.</p>
+
+  <p>Et il attendait.</p>
+</section>
+
+
+<section id="chapitre11" class="page">
+  <h2>Chapitre 11 : L’Enfant de la Brume</h2>
+
+  <p>Le Dogman s’avançait lentement.<br>Pas un bruit.<br>Pas une menace.</p>
+
+  <p>Son pelage noir luisait sous la faible lumière des lampes frontales. Il avait l’air jeune, presque hésitant, mais son regard rouge restait perçant. Intelligent.</p>
+
+  <p>Cathy fit un pas en arrière, mais Lionel leva la main.</p>
+
+  <p class="dialogue">— Ne bougez pas. Il est là pour parler.</p>
+  <p class="dialogue">— Parler ? souffla Léo.</p>
+  <p class="dialogue">— Oui. Par d’autres moyens.</p>
+
+  <p>Lionel fit lentement tomber son sac au sol, en sortit une pierre étrange, gravée de symboles identiques à ceux de la grotte.</p>
+
+  <p class="dialogue">— Ceci est une “clef”. Pas pour ouvrir une porte, mais pour ouvrir un lien. Le lien entre nos deux espèces.</p>
+
+  <p>Il s’agenouilla, plaça la pierre au sol, et fit un signe de la main. Le Dogman, lentement, fit de même. Il posa une griffe sur le symbole central.</p>
+
+  <p>Et soudain, un grondement sourd résonna dans leurs têtes.</p>
+
+  <p>Une voix… pas tout à fait une voix. Plutôt un flux de pensées, d’émotions, de souvenirs, projeté dans l’esprit de chacun.</p>
+
+  <hr class="separator">
+
+  <ul class="liste-histoire">
+    <li>— Une forêt, il y a très longtemps.</li>
+    <li>— Des Dogmen, vivant paisiblement.</li>
+    <li>— Des humains qui viennent avec le feu, la peur, les armes.</li>
+    <li>— Des combats. Des pertes. Des hurlements.</li>
+  </ul>
+
+  <p>Puis…</p>
+
+  <ul class="liste-dialogue">
+    <li>— Deux survivants.</li>
+    <li>— Un Ancien.</li>
+    <li>— Et un jeune.<br>Ce jeune.</li>
+  </ul>
+
+  <hr class="separator">
+
+  <p>La “voix” se fit plus claire, comme une pensée articulée :</p>
+
+  <p class="fleche-dialogue">➢ Je suis Ghaël. Gardien en devenir. Enfant de la dernière meute.</p>
+  <p class="fleche-dialogue">➢ Vous êtes venus sans comprendre. Vous avez blessé. Vous avez effrayé. Mais vous n’êtes pas tous mauvais.</p>
+
+  <p>Puis une autre image : l’Ancien Dogman, celui aux yeux jaunes, affaibli, caché dans les profondeurs du sanctuaire.</p>
+
+  <p class="fleche-dialogue">➢ Mon père ne vous fait pas confiance. Mais moi… je vois autre chose en vous.</p>
+
+  <p>Léo, bouleversé, murmura :</p>
+  <p class="dialogue">— Il veut la paix ?</p>
+
+  <p>Le Dogman répondit dans leur esprit, simplement :</p>
+  <p class="fleche-dialogue">➢ Je veux comprendre.</p>
+
+  <hr class="separator">
+
+  <p>Un silence s’installa.</p>
+
+  <p>Puis il tourna la tête vers un mur de la grotte. Une autre inscription, que Lionel lut à haute voix :</p>
+
+  <p class="fleche-dialogue">➢ “L’équilibre dépend des deux. S’ils s’affrontent, le monde saigne.”</p>
+
+  <p class="dialogue">— Il parle de lui… et de son père, comprit Lionel. S’il y a un conflit entre les deux Dogmen… c’est tout l’équilibre entre leur monde et le nôtre qui risque de basculer.</p>
+
+  <p>Mais soudain, le jeune Ghaël se figea.<br>Il tourna brusquement la tête vers l’entrée.</p>
+
+  <p>Et dans leurs esprits, un seul mot résonna.</p>
+
+  <p class="fleche-dialogue">➢ “Il vient.”</p>
+</section>
+
+<section id="chapitre12" class="page">
+  <h2>Chapitre 12 : Le Jugement du Gardien</h2>
+
+  <p>Un souffle glacial parcourut la grotte.</p>
+
+  <p>Les lampes frémirent. Les murs semblèrent vibrer.<br>
+  Même Tania, habituellement intrépide, se recroquevilla contre Cathy.</p>
+
+  <p>Et puis… il apparut.</p>
+
+  <p>Le Dogman aux yeux jaunes.</p>
+
+  <p>Le Gardien.</p>
+
+  <p>Il ne marchait pas.<br>
+  Il avançait comme une ombre, glissant dans la pénombre, son regard fendant l’âme de chacun.</p>
+
+  <p>Personne n’osait bouger. Pas même Lionel.</p>
+
+  <p>Seul Ghaël, le jeune Dogman, s’avança. Lentement. Tremblant.</p>
+
+  <p class="fleche-dialogue">➢ “Père…”</p>
+
+  <hr class="separator">
+
+  <p>Une voix résonna dans la grotte. Sèche. Ancienne. Puissante.</p>
+
+  <p class="fleche-dialogue">➢ “Tu as brisé le lien. Tu leur as parlé.”</p>
+
+  <hr class="separator">
+
+  <p>Ghaël baissa la tête.</p>
+
+  <p class="fleche-dialogue">➢ “Ils méritent une chance. Ils ne sont pas tous comme ceux d’avant. Ils ont changé.”</p>
+
+  <hr class="separator">
+
+  <p>Le Gardien grogna, un son guttural qui fit vibrer la roche.</p>
+
+  <p class="fleche-dialogue">➢ “Ils reviennent toujours. Avec le feu. Les armes. La peur.”</p>
+
+  <hr class="separator">
+
+  <p>Morgan voulut parler, mais Lionel leva la main. Ce n’était pas leur moment.</p>
+
+  <p>C’était entre eux.</p>
+
+  <p class="fleche-dialogue">➢ “Si tu continues sur cette voie, tu ne seras plus un Gardien. Tu seras… un traître.”</p>
+
+  <hr class="separator">
+
+  <p>La tension monta. Ghaël leva la tête.</p>
+
+  <p class="fleche-dialogue">➢ “Alors je préfère être un traître… qu’un tueur.”</p>
+
+  <hr class="separator">
+
+  <p>Un silence écrasant tomba dans la grotte.</p>
+
+  <p>Puis, lentement, le Dogman aux yeux jaunes s’approcha. Il passa à côté d’eux. Sa taille immense écrasait tout. Il ne les toucha pas. Mais chacun sentit son regard. Il n'était pas aveuglé par la haine. Il était déchiré.</p>
+
+  <p>Et sans un mot de plus, il repartit vers les profondeurs.</p>
+
+  <p>Mais dans leurs esprits, une dernière pensée :</p>
+
+  <p class="fleche-dialogue">➢ “Préparez-vous. Le choix approche. Une seule meute survivra.”</p>
+
+  <hr class="separator">
+
+  <p>Ghaël tomba à genoux.</p>
+
+  <p class="dialogue">— Il ne reviendra pas une deuxième fois sans se battre, dit-il.</p>
+
+  <p class="dialogue">— Il croit que vous allez trahir, ajouta Lionel. Et il ne laissera pas ce monde tranquille s’il sent que son équilibre est en danger.</p>
+
+  <p>Léo serra les poings.</p>
+
+  <p class="dialogue">— Alors on doit le prouver. À lui. Et au monde.</p>
+
+  <p>Morgan se leva, l’air sombre.</p>
+
+  <p class="dialogue">— Il faut préparer une dernière mission. Une rencontre finale. Et cette fois… ce sera à nous de fixer les règles.</p>
+</section>
+
+<section id="chapitre13" class="page">
+  <h2>Chapitre 13 : Les Alliés de l’Ombre</h2>
+
+  <p>Le vent soufflait fort sur les hauteurs des Pyrénées, arrachant les feuilles mortes des arbres dénudés. La grotte était loin derrière eux, mais son écho résonnait encore dans les esprits.</p>
+
+  <p>Les mots du Gardien… la peur qu’ils avaient tous ressentie… et le regard de Ghaël, si jeune mais déjà si meurtri.</p>
+
+  <hr class="separator">
+
+  <p>Ils s’étaient réfugiés dans la grange de Cathy, transformée en poste de commandement, entourée de caméras, de câbles, de cartes et de vieux livres que Lionel avait apportés de ses voyages.</p>
+
+  <p>Le silence pesait lourd.</p>
+
+  <p>Puis Lionel se leva, déroula un document poussiéreux, une carte annotée à la main, et désigna un point reculé au milieu des montagnes.</p>
+
+  <p class="dialogue">— Laruns. Un ancien village où les gens ne parlent plus du Bois-Mort depuis plus de trente ans. Là-bas vit un homme… ou plutôt une légende. Jean-Alban Arnaud. On l’appelait “le Muet de Laruns”. Il a vu les Dogmen. Et il est revenu vivant.</p>
+
+  <p>Léo fronça les sourcils.</p>
+
+  <p class="dialogue">— Pourquoi personne ne l’a interrogé ?</p>
+
+  <p class="dialogue">— Parce que depuis 1987, il ne parle plus à personne. Pas un mot. Pas un cri. Et chaque fois qu’on lui montre une photo de la forêt… il se met à pleurer.</p>
+
+  <p>Morgan posa sa main sur son fusil.</p>
+
+  <p class="dialogue">— Alors allons-y. Peut-être qu’il n’a pas besoin de parler pour nous dire la vérité.</p>
+
+  <hr class="separator">
+
+  <p>La montée vers Laruns fut longue, glaciale, et marquée par un sentiment croissant d’angoisse. Le village semblait figé dans le temps. Des maisons de pierre aux volets fermés, un silence surnaturel… même les corbeaux refusaient de voler au-dessus des toits.</p>
+
+  <p>Ils trouvèrent la cabane en bois à l’écart, à moitié mangée par la mousse, presque invisible entre les arbres. Tania grogna doucement en s’approchant. Cathy la retint.</p>
+
+  <p class="dialogue">— Il est là. Il nous regarde.</p>
+
+  <p>Un craquement. Une silhouette apparut à la fenêtre.</p>
+
+  <p><strong>Jean-Alban Arnaud.</strong></p>
+
+  <p>Une barbe blanche, des yeux immenses, marqués par des cernes noirs. Il ouvrit la porte, lentement, et fit un geste. Un simple signe de la main.</p>
+
+  <p class="dialogue fleche-dialogue">➢ « Entrez. »</p>
+
+  <hr class="separator">
+
+  <p>À l’intérieur, tout était couvert de dessins.</p>
+
+  <p>Des murs entiers remplis de croquis : silhouettes poilues, yeux jaunes, griffes, symboles anciens, paysages de cauchemar. Des dizaines, des centaines de pages.</p>
+
+  <p>Jean-Alban s’assit face à eux, fixant Lionel.</p>
+
+  <p>Puis il posa une planche devant lui. Une ancienne carte du Bois-Mort. Et au centre, un cercle noir entourant une grotte inconnue.</p>
+
+  <p>Lionel le regarda droit dans les yeux.</p>
+
+  <p class="dialogue">— Tu l’as vu. Tu sais ce qu’il est. Ce qu’ils sont.</p>
+
+  <p>Jean-Alban ne parla pas. Mais il prit un vieux carnet, tremblant, et écrivit lentement :</p>
+
+  <p class="dialogue fleche-dialogue">➢ « Ils étaient plus nombreux. Le Gardien n’est pas le premier. Ni le dernier. »</p>
+
+  <p class="dialogue fleche-dialogue">➢ « Ils protègent une porte. »</p>
+
+  <p>Léo se pencha.</p>
+
+  <p class="dialogue">— Une porte ? Vers quoi ?</p>
+
+  <p>Jean-Alban leva les yeux. Et pour la première fois depuis 1987… il ouvrit la bouche.</p>
+
+  <p class="dialogue fleche-dialogue">➢ “Vers ce qui vient après nous.”</p>
+
+  <hr class="separator">
+
+  <p>Le groupe resta figé. Le froid s’intensifia. Dehors, un hurlement lointain fendit le silence.</p>
+
+  <p><strong>Pas un Dogman.</strong></p>
+
+  <p><strong>Autre chose.</strong></p>
+</section>
+
+
+<section id="resume" class="page">
+  <h2 style="display:none;">Résumé</h2>
+  <div style="position: relative; text-align: center;">
+    <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_000000007d6851f8b17e20cc43b3f10e_conversation_id_67f1799b-09a0-8004-95d5-3dce2b274a9a_message_id_bade0026-7ad9-49eb-84a3-700d18a08f77__2_.png" alt="Fond du résumé" style="width:100%; height:auto;">
+    <div style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 80%; color: white; font-style: italic; font-size: 1.1em; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+      <p><strong><em>La Brigade de la Loup-Garou Mobile</em></strong> est une saga captivante mêlant mystère, paranormal et action. Dans les forêts brumeuses de Bordes, Cathy BELLAMY, son petit-fils Léo TRESCASES BELLAMY et leurs alliés affrontent une créature légendaire : le Dogman.</p>
+      <p>Soutenus par des technologies de pointe et une foi inébranlable, ils croisent le chemin de deux Dogmen : l’un jeune, appelé Ghaël, en quête de compréhension, et l’autre, un Gardien aux yeux jaunes, protecteur d’un ancien pacte entre les Hommes et la Forêt.</p>
+      <p>Chapitre après chapitre, les héros découvrent les mystères enfouis du <em>Bois-Mort</em>, un sanctuaire oublié, et les conséquences tragiques de la rupture d’un serment ancestral. Une descente dans les profondeurs mène à une vérité bouleversante : les Dogmen ne sont pas des monstres, mais les derniers gardiens d’un équilibre précaire.</p>
+      <p>Le final, émouvant et puissant, oppose le besoin de justice à la volonté de paix, dans une ultime confrontation où le choix d’un avenir meilleur repose sur la compréhension et le respect.</p>
+      <p>Un voyage inoubliable dans les mystères de la forêt, la mémoire des anciens, et l’espoir d’un nouveau pacte entre nature et humanité.</p>
+    </div>
+  </div>
+</section>
+
+<section id="chapitre14" class="page">
+  <h2>Chapitre 14 : Le Pacte Brisé</h2>
+
+  <p>Ils étaient restés figés.</p>
+
+  <p><span class="fleche-dialogue">➢</span> « Vers ce qui vient après nous. »</p>
+
+  <p>Ces mots de Jean-Alban, comme un écho glacé, tournaient en boucle dans l’esprit de chacun.</p>
+
+  <p>Morgan serra les dents.</p>
+
+  <p class="dialogue">— Une porte ? Une autre dimension ? Ou quelque chose d’enfoui ?</p>
+
+  <p>Lionel, silencieux, analysait la carte griffonnée par le vieux survivant. Il traça du doigt un tracé invisible, reliant les différents symboles gravés dans les grottes, les anciennes zones interdites, les vestiges oubliés.</p>
+
+  <p class="dialogue">— Ce n’est pas juste un territoire sacré. C’est un sceau.</p>
+
+  <p class="dialogue">— Un sceau ? demanda Léo.</p>
+
+  <p class="dialogue">— Oui. Les Dogmen sont les gardiens d’un pacte ancien entre les Hommes et… autre chose. Une entité, un pouvoir, un mal. Je ne sais pas encore. Mais ce qui est sûr, c’est que ce pacte a été brisé.</p>
+
+  <p>Cathy se leva lentement, fixant le carnet de Jean-Alban.</p>
+
+  <p class="dialogue">— Et si ce n’était pas “autre chose” ? Et si c’était nous ?</p>
+
+  <hr class="separator">
+
+  <p>Elle posa la main sur une page.</p>
+
+  <p>Une date.<br>1755.<br>Un blason ancien, une croix noire entourée d’une meute.</p>
+
+  <p class="dialogue">— Ce blason, je l’ai vu quand j’étais enfant. Mon grand-père l’avait gravé dans son couteau. Il disait que notre famille avait autrefois juré fidélité à “l’Esprit de la Forêt”.</p>
+
+  <p>Morgan la fixa.</p>
+
+  <p class="dialogue">— Tu es en train de dire que ta famille faisait partie du pacte ?</p>
+
+  <p class="dialogue">— Je crois que… oui.</p>
+
+  <p>Lionel se leva d’un bond, fouilla dans ses notes et sortit une relique : un bout de parchemin déchiré, conservé dans une poche plastique. Il le tendit à Cathy.</p>
+
+  <p>Elle le lut à voix haute.</p>
+
+  <blockquote><span class="fleche-dialogue">➢</span> “Nous, les humains du premier serment, jurons de ne jamais franchir le cercle de pierre. De ne jamais percer la tombe du Sommeil. Et de respecter la Main des Gardiens. Car si le cercle est rompu, le monde s’ouvrira au Néant.”</blockquote>
+
+  <hr class="separator">
+
+  <p>Léo Cometti, pâle, regarda les autres.</p>
+
+  <p class="dialogue">— Et ce cercle… on l’a rompu ?</p>
+
+  <p>Jean-Alban leva lentement la main. Il pointa Léo.</p>
+
+  <p>Et dit, d’une voix rauque :</p>
+
+  <p class="dialogue">— C’est vous qui l’avez fait. Avec votre drone. En survolant la stèle. C’est ce qui l’a réveillé.</p>
+
+  <hr class="separator">
+
+  <p>Un frisson foudroya Léo. Il recula, bouleversé.</p>
+
+  <p class="dialogue">— Je voulais juste… comprendre.</p>
+
+  <p class="dialogue">— Et tu l’as fait, dit Ghaël, entré sans un bruit. Mais la compréhension a un prix. Et mon père… veut le faire payer.</p>
+
+  <p>Un silence lourd s’abattit sur la pièce.</p>
+
+  <p>Puis Ghaël s’approcha du carnet et écrivit une phrase.</p>
+
+  <blockquote><span class="fleche-dialogue">➢</span> « Il prépare le rituel. Il va rouvrir la tombe du Sommeil. Et cette fois… il ne la refermera pas. »</blockquote>
+
+  <hr class="separator">
+
+  <p>Lionel comprit immédiatement.</p>
+
+  <p class="dialogue">— S’il fait ça, ce ne sera plus une histoire de Dogmen. Ce sera une apocalypse.</p>
+
+  <p>Morgan hocha la tête.</p>
+
+  <p class="dialogue">— Il faut l’arrêter. Mais pas comme un ennemi. Comme un frère. Un Gardien devenu fou.</p>
+
+  <p>Ghaël regarda le feu.</p>
+
+  <p class="dialogue">— Il ne m’écoutera plus. Mais il écoutera… la Forêt. Et pour ça, il faut retourner au cœur du sanctuaire. Là où dort encore la stèle sacrée.</p>
+
+  <hr class="separator">
+
+  <p>C’était décidé.</p>
+
+  <p>La dernière mission commencerait demain.</p>
+
+  <p>Une mission pour restaurer l’équilibre.</p>
+
+  <p>Ou pour sombrer avec lui.</p>
+</section>
+
+<section id="chapitre15" class="page">
+  <h2>Chapitre 15 : Le Cœur du Sanctuaire</h2>
+
+  <p>Le jour s’était levé sur un monde silencieux.</p>
+
+  <p>Pas de chants d’oiseaux. Pas de vent. Pas même les grognements lointains des Dogmen.</p>
+
+  <p>La nature retenait son souffle. Comme si elle savait ce qui allait se jouer.</p>
+
+  <p>Le groupe s’était réuni à l’aube.<br>
+  Morgan vérifiait une dernière fois son matériel.<br>
+  Lionel ajustait sa caméra frontale — <span class="dialogue">“Si on meurt, autant que le monde sache pourquoi.”</span><br>
+  Thierry, bras en écharpe, tenait fermement une tablette reliée aux capteurs thermiques.<br>
+  Léo Cometti chargeait une valise de fioles à haute fréquence — un prototype de son invention.<br>
+  Cathy fixait le bois, ses vieilles bottes prêtes à marcher.<br>
+  Et Ghaël… les guidait, silencieux, comme un fantôme.</p>
+
+  <p>La stèle du Sommeil reposait au cœur d’un sanctuaire, au fin fond du Bois-Mort. Protégée par des cercles de pierre, cachée sous des racines et du lichen, elle était le point d’ancrage entre deux mondes. Et elle vibrait. Littéralement.</p>
+
+  <p>Quand ils arrivèrent, la température chuta de dix degrés.</p>
+
+  <span class="dialogue">— Regardez, dit Léo, en pointant les moniteurs. C’est comme si le sol pulsait. Comme un battement de cœur.</span>
+
+  <hr class="separator">
+
+  <p>Au centre, la stèle… fracturée.</p>
+  <p>Un liquide noir suintait de ses failles.</p>
+
+  <span class="dialogue">— Il a commencé le rituel, souffla Lionel. Le Gardien a brisé l’ancien serment.</span>
+
+  <p>Ghaël, à genoux devant la stèle, tendit les mains vers la pierre.<br>
+  Ses griffes vibrèrent.<br>
+  Ses yeux rouges s’illuminèrent.<br>
+  Et il dit :</p>
+
+  <p><span class="fleche-dialogue">➢</span> <span class="dialogue">“Écoutez…”</span></p>
+
+  <hr class="separator">
+
+  <p>Tous entendirent.<br>
+  Un bourdonnement sourd.<br>
+  Des murmures dans une langue oubliée.<br>
+  Des voix d’anciens Gardiens, criant à l’unisson.</p>
+
+  <p>Et au centre du cercle, entre les pierres…<br>
+  Un puits.<br>
+  Ouvert. Béant. Profond.<br>
+  Pas un puits d’eau.<br>
+  Un puits de ténèbres.</p>
+
+  <p>Morgan s’en approcha. Il lança une pierre.<br>
+  Pas de bruit.</p>
+
+  <span class="dialogue">— Il a ouvert la Tombe. Il veut libérer ce qu’elle retient.</span>
+
+  <hr class="separator">
+
+  <p>Lionel, les yeux écarquillés, lut un dernier texte gravé sur la stèle :</p>
+  <p><span class="fleche-dialogue">➢</span> <span class="dialogue">« Quand la stèle cède, l’Ombre revient. Et avec elle, le Fils des Nuits. »</span></p>
+
+  <hr class="separator">
+
+  <p>Ghaël recula.</p>
+  <span class="dialogue">— Le Fils des Nuits… ce n’est pas mon père. Ce n’est même pas un Dogman. C’est… ce qu’ils ont enfermé il y a des siècles. Ce que lui-même a juré de garder. Jusqu’à ce qu’il rompe le pacte.</span>
+
+  <p>Cathy tomba à genoux.</p>
+  <span class="dialogue">— Et maintenant… c’est trop tard ?</span>
+
+  <hr class="separator">
+
+  <p>Un rugissement déchira les bois.<br>
+  Non pas un hurlement de loup.<br>
+  Un cri venu d’un autre monde.</p>
+
+  <p>Et puis… il apparut.</p>
+
+  <p>Le Gardien, debout au bord du puits.<br>
+  Ses yeux jaunes brûlaient comme deux soleils maudits.<br>
+  Son pelage était trempé de sang, ses griffes brillantes, son souffle rauque.</p>
+
+  <p>Il leva la tête vers eux.</p>
+
+  <p><span class="fleche-dialogue">➢</span> <span class="dialogue">“Ce monde a oublié. Ce monde a trahi. Il ne mérite pas d’être gardé.”</span></p>
+
+  <hr class="separator">
+
+  <p>Il sauta dans le puits.</p>
+  <p>Et la terre trembla.</p>
+
+  <p>Léo tomba à genoux, les mains sur la tête. Des images défilaient dans son esprit : flammes, cris, visions d’un futur apocalyptique.</p>
+
+  <span class="dialogue">— ON DOIT LE SUIVRE ! hurla Morgan.</span>
+
+  <p>Mais Ghaël tendit la main.</p>
+
+  <span class="dialogue">— Non. Il faut le rejoindre, mais pas avec violence. Le dernier choix ne se fera pas dans le combat. Il se fera dans le lien.</span>
+
+  <hr class="separator">
+
+  <p>Silence.</p>
+  <p>Puis, une lumière s’échappa de la stèle. Un passage.<br>
+  Une descente.<br>
+  Vers les ténèbres.<br>
+  Vers le chapitre final.</p>
+</section>
+
+<section id="chapitre16" class="page">
+  <h2>Chapitre 16 : L’Heure du Choix</h2>
+
+  <p>La descente fut longue.</p>
+
+  <p>Plus ils avançaient dans les profondeurs de la terre, plus le silence se faisait lourd, étouffant. Pas un souffle, pas un bruit. Juste leurs pas, lents, incertains, et cette lumière étrange, douce, irréelle, qui baignait les parois.</p>
+
+  <p>Ils ne marchaient plus seulement vers le centre de la grotte.</p>
+
+  <p>Ils marchaient vers la vérité.</p>
+
+  <hr class="separator">
+
+  <p>Au bout d’un long tunnel de roche vivante, ils arrivèrent dans une immense cavité souterraine.</p>
+
+  <p>Au centre, un autel de pierre.</p>
+  <p>Et devant lui, à genoux, le Gardien.</p>
+  <p>Son dos était voûté, son pelage grisonnant, sa respiration profonde.</p>
+  <p>Mais il ne semblait pas prêt à attaquer.</p>
+
+  <p>Il attendait.</p>
+
+  <p>Ghaël s’approcha lentement.</p>
+
+  <p><span class="dialogue">— Père…</span> murmura-t-il.</p>
+
+  <p>Le Gardien leva les yeux. Ses iris jaunes brillaient d’une lueur triste, fatiguée. Il ne grognait plus. Il parlait par la pensée, directement dans leur cœur.</p>
+
+  <p><span class="fleche-dialogue">➢ “Vous êtes descendus. Vous êtes venus voir ce que vous avez détruit.”</span></p>
+
+  <p>Léo fit un pas. Il tremblait. Ses mots sortirent brisés.</p>
+
+  <p><span class="dialogue">— On… on veut comprendre. On veut réparer.</span></p>
+
+  <p><span class="fleche-dialogue">➢ “Il est trop tard pour réparer,”</span> répondit le Gardien. <span class="fleche-dialogue">“Le monde d’avant n’existe plus. Vous l’avez dévoré.”</span></p>
+
+  <p>Autour d’eux, les parois s’animèrent. Des fresques vivantes.</p>
+
+  <p>Elles montraient un monde où humains et créatures vivaient en paix.</p>
+  <p>Des hommes qui respectaient la forêt, qui communiaient avec les esprits.</p>
+
+  <p>Puis, les machines.<br>
+  Les routes.<br>
+  Le béton.<br>
+  Les cris.<br>
+  Et la chute.</p>
+
+  <p><span class="dialogue">— Vous aviez un pacte,</span> dit le Gardien. <span class="dialogue">Nous vous avons fait confiance. Vous avez brisé le serment. Nous avons protégé ce qui restait. Mais maintenant… il ne reste rien à protéger.</span></p>
+
+  <p>Il leva la main.</p>
+
+  <p>Et une graine apparut.</p>
+
+  <p>Brillante. Pure.</p>
+  <p>Le dernier fragment de l’ancien monde.</p>
+  <p>Une essence de nature, de silence, de paix.</p>
+
+  <p><span class="fleche-dialogue">➢ “Je vais la planter dans l’oubli. Et cette terre redeviendra forêt. Vous n’y serez plus.”</span></p>
+
+  <p>Morgan leva son arme, hésitant. Lionel le retint.</p>
+
+  <p><span class="dialogue">— Non.</span><br>
+  <span class="dialogue">— Pas cette fois.</span><br>
+  <span class="dialogue">— Ce n’est pas notre guerre.</span></p>
+
+  <p>Léo s’approcha de Ghaël. Le jeune Dogman le fixa.</p>
+
+  <p><span class="dialogue">— Tu n’es pas comme lui.</span></p>
+
+  <p><span class="fleche-dialogue">➢ “Non,”</span> répondit Ghaël. <span class="fleche-dialogue">“Je suis entre les deux mondes. Et je comprends maintenant. Le vôtre… doit se retirer.”</span></p>
+
+  <p>Il posa sa griffe sur le cœur de Léo.</p>
+
+  <p><span class="fleche-dialogue">➢ “Tu as vu, tu as su. Dis-leur. Raconte. Mais ne cherche plus à dominer.”</span></p>
+
+  <p>La terre trembla doucement.</p>
+  <p>Le Gardien planta la graine.</p>
+
+  <p>Une lumière verte envahit la grotte.</p>
+
+  <p>Tout fut silence.</p>
+
+  <hr class="separator">
+
+  <p>Ils se réveillèrent à l’orée de la forêt. Il faisait jour.</p>
+
+  <p>Mais la stèle avait disparu.</p>
+  <p>Plus aucune trace du Bois-Mort.</p>
+  <p>Seulement des arbres, des racines, des oiseaux.</p>
+  <p>Une nature revenue à l’état pur.</p>
+
+  <p>Jean-Alban Arnaud n’était plus là.</p>
+  <p>Ghaël non plus.</p>
+  <p>Même Tania regardait le vent avec sérénité.</p>
+
+  <p>Cathy posa la main sur l’écorce d’un vieux chêne.</p>
+
+  <p><span class="dialogue">— Ils nous ont laissé vivre. Mais nous devons partir maintenant.</span></p>
+
+  <p>Léo se retourna une dernière fois.</p>
+
+  <p>Et dans le feuillage, il crut voir… deux yeux rouges.</p>
+
+  <p>Puis le vent les effaça.</p>
+
+  <hr class="separator">
+
+  <h3>Épilogue : Le Dernier Message</h3>
+
+  <p>Quelques semaines plus tard, Léo prit la plume. Il créa un site.</p>
+  <p>Un seul article.</p>
+  <p>Un témoignage.</p>
+
+  <p><span class="fleche-dialogue">➢ “Ce n’était pas un monstre. C’était un gardien. Et nous étions l’invasion.”</span></p>
+
+  <p>Puis il coupa tout.</p>
+
+  <p>Et il retourna marcher.</p>
+  <p>Dans la forêt.</p>
+  <p>Sans caméra.</p>
+  <p>Sans bruit.</p>
+  <p>Juste pour écouter.</p>
+
+  <h3>FIN</h3>
+</section>
+
+    <footer>
+        <button class="turn-page-button" onclick="turnPage('previous')">Page Précédente</button>
+        <button class="turn-page-button" onclick="turnPage('next')">Page Suivante</button>
+    </footer>
+
+    <script>
+        let currentPage = 'premierecouverture';
+
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            currentPage = pageId;
+        }
+
+        function turnPage(direction) {
+            const pages = [
+  'premierecouverture', 
+  'presentation', 
+  'personnagesprincipaux', 
+  'tabledesmatieres', 
+  'prologue', 
+  'chapitre1', 'chapitre2', 'chapitre3', 'chapitre4', 'chapitre5', 
+  'chapitre6', 'chapitre7', 'chapitre8', 'chapitre9', 'chapitre10', 
+  'chapitre11', 'chapitre12', 'chapitre13', 'chapitre14', 'chapitre15', 'chapitre16', 
+  'resume'
+];
+
+            let currentIndex = pages.indexOf(currentPage);
+            if (direction === 'next' && currentIndex < pages.length - 1) {
+                currentPage = pages[currentIndex + 1];
+            } else if (direction === 'previous' && currentIndex > 0) {
+                currentPage = pages[currentIndex - 1];
+            }
+            showPage(currentPage);
+        }
+
+        // Show the prologue page on load
+        showPage(currentPage);
+    </script>
+</body>
+</html>
