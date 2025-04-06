@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -112,16 +113,106 @@
   box-sizing: border-box;
 }
 
-/* Sur les petits écrans */
-@media screen and (max-width: 600px) {
-  #resume .resume-text {
-    font-size: 1em;
-    width: 90%;
-    top: 5%;
-    padding: 15px;
+/* ===============================
+   PAR DÉFAUT (desktop)
+   =============================== */
+
+/* Le résumé mobile est masqué par défaut */
+.mobile-card,
+.mobile-toggle-wrapper {
+  display: none;
+}
+
+/* La version desktop est visible par défaut */
+.resume-desktop {
+  display: block;
+}
+
+
+/* ===============================
+   VERSION DESKTOP (écran ≥ 601px)
+   =============================== */
+@media screen and (min-width: 601px) {
+  .resume-desktop {
+    display: block !important;
+  }
+
+  .mobile-card,
+  .mobile-toggle-wrapper {
+    display: none !important;
   }
 }
 
+
+/* ===============================
+   VERSION MOBILE (écran ≤ 600px)
+   =============================== */
+@media screen and (max-width: 600px) {
+  /* Cacher la version desktop */
+  .resume-desktop {
+    display: none !important;
+  }
+
+  /* Afficher la carte mobile */
+  .mobile-card {
+    display: block !important;
+    perspective: 1000px;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+  }
+
+  .mobile-card-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+
+  .mobile-card.flipped .mobile-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .mobile-card-front,
+  .mobile-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+  }
+
+  .mobile-card-front {
+    z-index: 2;
+  }
+
+  .mobile-card-back {
+    transform: rotateY(180deg);
+    background: white;
+    color: black;
+    padding: 20px;
+    padding-top: 40px; /* Pour éviter la superposition avec le bouton */
+  }
+
+  .mobile-toggle-wrapper {
+    display: block !important;
+    text-align: center;
+    margin-top: 10px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .toggle-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
     </style>
 </head>
 <body>
@@ -1224,36 +1315,6 @@
   <p><strong>Autre chose.</strong></p>
 </section>
 
-
-<section id="resume" class="page">
-  <h2 style="display:none;">Résumé</h2>
-  <div style="position: relative; text-align: center;">
-    <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_000000007d6851f8b17e20cc43b3f10e_conversation_id_67f1799b-09a0-8004-95d5-3dce2b274a9a_message_id_bade0026-7ad9-49eb-84a3-700d18a08f77__2_.png" alt="Fond du résumé" style="width:100%; height:auto;">
-    <div style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 80%; color: white; font-style: italic; font-size: 1.1em; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
-      <p><strong><em>La Brigade de la Loup-Garou Mobile</em></strong> est une saga captivante mêlant mystère, paranormal et action. Dans les forêts brumeuses de Bordes, Cathy BELLAMY, son petit-fils Léo TRESCASES BELLAMY et leurs alliés affrontent une créature légendaire : le Dogman.</p>
-      <p>Soutenus par des technologies de pointe et une foi inébranlable, ils croisent le chemin de deux Dogmen : l’un jeune, appelé Ghaël, en quête de compréhension, et l’autre, un Gardien aux yeux jaunes, protecteur d’un ancien pacte entre les Hommes et la Forêt.</p>
-      <p>Chapitre après chapitre, les héros découvrent les mystères enfouis du <em>Bois-Mort</em>, un sanctuaire oublié, et les conséquences tragiques de la rupture d’un serment ancestral. Une descente dans les profondeurs mène à une vérité bouleversante : les Dogmen ne sont pas des monstres, mais les derniers gardiens d’un équilibre précaire.</p>
-      <p>Le final, émouvant et puissant, oppose le besoin de justice à la volonté de paix, dans une ultime confrontation où le choix d’un avenir meilleur repose sur la compréhension et le respect.</p>
-      <p>Un voyage inoubliable dans les mystères de la forêt, la mémoire des anciens, et l’espoir d’un nouveau pacte entre nature et humanité.</p>
-    </div>
-  </div>
-</section>
-
-<section id="resume" class="page">
-  <h2 style="display:none;">Résumé</h2>
-  <div style="position: relative; text-align: center;">
-    <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_000000007d6851f8b17e20cc43b3f10e_conversation_id_67f1799b-09a0-8004-95d5-3dce2b274a9a_message_id_bade0026-7ad9-49eb-84a3-700d18a08f77__2_.png" alt="Fond du résumé" style="width:100%; height:auto;">
-    <div class="resume-text">
-	  <p><strong><em>La Brigade de la Loup-Garou Mobile</em></strong> est une saga captivante mêlant mystère, paranormal et action. Dans les forêts brumeuses de Bordes, Cathy BELLAMY, son petit-fils Léo TRESCASES BELLAMY et leurs alliés affrontent une créature légendaire : le Dogman.</p>
-      <p>Soutenus par des technologies de pointe et une foi inébranlable, ils croisent le chemin de deux Dogmen : l’un jeune, appelé Ghaël, en quête de compréhension, et l’autre, un Gardien aux yeux jaunes, protecteur d’un ancien pacte entre les Hommes et la Forêt.</p>
-      <p>Chapitre après chapitre, les héros découvrent les mystères enfouis du <em>Bois-Mort</em>, un sanctuaire oublié, et les conséquences tragiques de la rupture d’un serment ancestral. Une descente dans les profondeurs mène à une vérité bouleversante : les Dogmen ne sont pas des monstres, mais les derniers gardiens d’un équilibre précaire.</p>
-      <p>Le final, émouvant et puissant, oppose le besoin de justice à la volonté de paix, dans une ultime confrontation où le choix d’un avenir meilleur repose sur la compréhension et le respect.</p>
-      <p>Un voyage inoubliable dans les mystères de la forêt, la mémoire des anciens, et l’espoir d’un nouveau pacte entre nature et humanité.</p>
-    </div>
-  </div>
-</section>
-
-
 <section id="chapitre14" class="page">
   <h2>Chapitre 14 : Le Pacte Brisé</h2>
 
@@ -1582,6 +1643,43 @@
   <h3>FIN</h3>
 </section>
 
+<section id="resume" class="page">
+  <h2 style="display:none;">Résumé</h2>
+
+  <!-- Ordinateur : image + texte -->
+  <div class="resume-desktop">
+    <div style="position: relative; text-align: center;">
+      <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_000000007d6851f8b17e20cc43b3f10e_conversation_id_67f1799b-09a0-8004-95d5-3dce2b274a9a_message_id_bade0026-7ad9-49eb-84a3-700d18a08f77__2_.png" alt="Image de couverture" style="width:100%; height:auto;">
+      <div class="resume-text">
+      <p><strong><em>La Brigade de la Loup-Garou Mobile</em></strong> est une saga captivante mêlant mystère, paranormal et action...</p>
+      <p>Dans les forêts brumeuses de Bordes, Cathy BELLAMY, son petit-fils Léo et leurs alliés affrontent une créature légendaire : le Dogman.</p>
+      <p>Deux Dogmen : Ghaël, jeune, curieux… et le Gardien aux yeux jaunes, protecteur d’un ancien pacte. L’histoire devient une chasse spirituelle entre paix et destruction.</p>
+      <p>Jusqu’à l’heure du choix.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile : carte recto/verso -->
+<div class="mobile-card" id="mobileCard">
+  <div class="mobile-card-inner">
+    <div class="mobile-card-front">
+      <img src="https://la-brigade-de-la-loup--garou-mobile.weebly.com/uploads/1/4/6/7/146791865/file_000000007d6851f8b17e20cc43b3f10e_conversation_id_67f1799b-09a0-8004-95d5-3dce2b274a9a_message_id_bade0026-7ad9-49eb-84a3-700d18a08f77__2_.png" alt="Dernière de couverture" style="width:100%; height:auto;">
+    </div>
+    <div class="mobile-card-back">
+      <p><strong><em>La Brigade de la Loup-Garou Mobile</em></strong> est une saga captivante mêlant mystère, paranormal et action...</p>
+      <p>Dans les forêts brumeuses de Bordes, Cathy BELLAMY, son petit-fils Léo et leurs alliés affrontent une créature légendaire : le Dogman.</p>
+      <p>Deux Dogmen : Ghaël, jeune, curieux… et le Gardien aux yeux jaunes, protecteur d’un ancien pacte. L’histoire devient une chasse spirituelle entre paix et destruction.</p>
+      <p>Jusqu’à l’heure du choix.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bouton mobile -->
+<div class="mobile-toggle-wrapper">
+  <button id="flipButton" class="toggle-button" onclick="toggleFlip()">Voir le résumé</button>
+</div>
+</section>
+
     <footer>
         <button class="turn-page-button" onclick="turnPage('previous')">Page Précédente</button>
         <button class="turn-page-button" onclick="turnPage('next')">Page Suivante</button>
@@ -1621,6 +1719,18 @@
 
         // Show the prologue page on load
         showPage(currentPage);
+function toggleFlip() {
+  const card = document.getElementById('mobileCard');
+  const btn = document.getElementById('flipButton');
+
+  card.classList.toggle('flipped');
+
+  if (card.classList.contains('flipped')) {
+    btn.textContent = "Revenir à l’image";
+  } else {
+    btn.textContent = "Voir le résumé";
+  }
+}
     </script>
 </body>
 </html>
